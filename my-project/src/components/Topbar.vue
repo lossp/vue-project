@@ -1,16 +1,21 @@
 <template>
     <div>
         <section>
-            <div>
+            <div id="navigator">
                 <ul>
                     <li>Top</li>
                     <li>Trending</li>
                     <li>Show</li>
+                    <li id="right">Built with Vue.js</li>
                 </ul>
-                <span>Built with Vue.js</span>
             </div>
-            
-            <h1>{{ title }}</h1>
+            <div id="pages">
+                <ul>
+                    <li>&lt pre</li>
+                    <li>pages</li>
+                    <li>more &gt</li>
+                </ul>
+            </div>
         </section>
     </div>
 </template>
@@ -32,24 +37,36 @@
 }
     section{
         border: 1px black solid;
-        >div{
-            position: relative;
+        >#navigator{
             background-color: rgb(255,107,0);
             height: 60px;
             color: white; 
             display: flex;
             align-items:center;
+            justify-content:center;
             >ul{
-                margin-left: 300px;
+                display: flex;
                 >li{
                 list-style: none;
-                float: left;
                 margin-right: 20px;
                 }
+                >#right{
+                    margin-left: 500px;
+                }
             }
-            span{
-                position:relative;
-                margin-left:500px;
+        }
+        >#pages{
+            >ul{
+                position: relative;
+                height: 50px;
+                display: flex;
+                align-items:center;
+                justify-content:center;
+                >li{
+                    list-style: none;
+                    padding-right: 10px;
+                    margin-left: 25px;
+                }
             }
         }
     }
